@@ -1,6 +1,9 @@
 FROM    ubuntu:trusty
 
 ADD     scripts /scripts
+RUN     sh /scripts/pkg_install.sh
+
+ADD     pkg /pkg 
 
 RUN     sh /scripts/env_prepare.sh
 RUN     sh /scripts/dashboard.sh
